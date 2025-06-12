@@ -13,6 +13,8 @@ The program blinks an led `LED_0` on and off at different speeds depending if th
 The program contains a 32 bit counter `counter` that increments every clock cycle on a 100 Mhz clock (default clock speed for this board). The rate of which the LED is blinking is 
 affected from which bit it is looking at depending on the state of the switch (either `counter[22]`, `counter[23]`).
   
-
+<p align = "center">
+  <img src = "blinky.gif" width = "600">
+</p>
 
 
