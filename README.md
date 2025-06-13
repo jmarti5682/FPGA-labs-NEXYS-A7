@@ -4,7 +4,7 @@ The goal of this repo is to show off a series of labs assigned in the course CPE
 Original Files for the labs can be found here: [CPE487: Nexys-A7](https://github.com/byett/dsd/tree/CPE487-Fall2024/Nexys-A7)
 
 ## Contents
-### Lab 1 - Seven-Segment Decoder
+### Lab 1 - Seven-Segment Decoder: [Lab 1 README](Lab-1-LED-Decoder)
 ### Lab 2 - Four-Digit Hex Counter
 ### Lab 3 - Bouncing Ball
 ### Lab 4 - Hex Calculator
