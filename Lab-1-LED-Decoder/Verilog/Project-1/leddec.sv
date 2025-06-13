@@ -8,48 +8,49 @@ Purpose: To display hex on the on-board seven-segment display
 `timescale 1ns / 1ps
 
 
-module leddec(
-    input [2:0] dig, 
-    input [3:0] data, 
-    output reg [7:0] anode, 
-    output reg [6:0] seg);
+module leddec
+   (input [2:0] dig,            // 3-bit input
+    input [3:0] data,           // 4-bit input
+    output logic [7:0] anode,   // 8-bit output
+    output logic [6:0] seg      // 7-bit output
+   );    
 
    
-    always @ (*) 
+    always @(data, dig)
     begin
     
     case(data)
-        'b0000 : seg <= 'b0000001; // 0
-        'b0001 : seg <= 'b1001111; // 1
-        'b0010 : seg <= 'b0010010; // 2
-        'b0011 : seg <= 'b0000110; // 3
-        'b0100 : seg <= 'b1001100; // 4
-        'b0101 : seg <= 'b0100100; // 5
-        'b0110 : seg <= 'b0100000; // 6
-        'b0111 : seg <= 'b0001111; // 7
-        'b1000 : seg <= 'b0000000; // 8
-        'b1001 : seg <= 'b0000100; // 9
-        'b1010 : seg <= 'b0001000; // A
-        'b1011 : seg <= 'b1100000; // B
-        'b1100 : seg <= 'b0110001; // C
-        'b1101 : seg <= 'b1000010; // D
-        'b1110 : seg <= 'b0110000; // E
-        'b1111 : seg <= 'b0111000; // F
-        default : seg <= 'b1111111;
+        4'b0000 : seg <= 7'b0000001; // 0
+        4'b0001 : seg <= 7'b1001111; // 1
+        4'b0010 : seg <= 7'b0010010; // 2
+        4'b0011 : seg <= 7'b0000110; // 3
+        4'b0100 : seg <= 7'b1001100; // 4
+        4'b0101 : seg <= 7'b0100100; // 5
+        4'b0110 : seg <= 7'b0100000; // 6
+        4'b0111 : seg <= 7'b0001111; // 7
+        4'b1000 : seg <= 7'b0000000; // 8
+        4'b1001 : seg <= 7'b0000100; // 9
+        4'b1010 : seg <= 7'b0001000; // A
+        4'b1011 : seg <= 7'b1100000; // B
+        4'b1100 : seg <= 7'b0110001; // C
+        4'b1101 : seg <= 7'b1000010; // D
+        4'b1110 : seg <= 7'b0110000; // E
+        4'b1111 : seg <= 7'b0111000; // F
+        default : seg <= 7'b1111111;
     endcase 
     
     case(dig)
-        'b000 : anode <= 'b11111110; // 0
-        'b001 : anode <= 'b11111101; // 1
-        'b010 : anode <= 'b11111011; // 2
-        'b011 : anode <= 'b11110111; // 3
-        'b100 : anode <= 'b11101111; // 4
-        'b101 : anode <= 'b11011111; // 5
-        'b110 : anode <= 'b10111111; // 6
-        'b111 : anode <= 'b01111111; // 7
-        default: anode <= 'b11111111;
+        3'b000 : anode <= 8'b11111110; // 0
+        3'b001 : anode <= 8'b11111101; // 1
+        3'b010 : anode <= 8'b11111011; // 2
+        3'b011 : anode <= 8'b11110111; // 3
+        3'b100 : anode <= 8'b11101111; // 4
+        3'b101 : anode <= 8'b11011111; // 5
+        3'b110 : anode <= 8'b10111111; // 6
+        3'b111 : anode <= 8'b01111111; // 7
+        default: anode <= 8'b11111111;
     endcase
         
     end
     
-endmodule
+endmodule: leddec
