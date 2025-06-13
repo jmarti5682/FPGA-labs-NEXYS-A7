@@ -13,7 +13,8 @@ Here are some other uesful resources that helped me to create this repo:\
 Original files for the labs can be found here: [CPE487: Nexys-A7](https://github.com/byett/dsd/tree/CPE487-Fall2024/Nexys-A7)
 
 **Current Progress: [█░░░░░░░░░░░░] (8%)**\
-*Part 1 of Lab 1 Finsihed*
+*Part 1 of Lab 1 Finsihed*\
+![Cat](assets/cat_walking.gif)
 
 ## Contents
 ### Lab 1 - Seven-Segment Decoder: [Lab 1 README](Lab-1-LED-Decoder)
