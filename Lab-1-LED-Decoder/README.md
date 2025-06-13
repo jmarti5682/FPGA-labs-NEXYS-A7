@@ -151,6 +151,6 @@ case(dig)
 Lastly, we can go ahead and place those case structures inside of our module and call it a day! You can refer to the `leddec.vs` file to see everything together. 
 
 #### Example Image:
-![F](assets/lab1/F.png)
+![F](FPGA-labs-NEXYS-A7/assets/lab1/F.png)
 
 ## Project 2: 
