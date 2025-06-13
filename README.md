@@ -1,7 +1,9 @@
 # FPGA LABS - NEXYS A7
-The goal of this repo is to show off a series of labs assigned in the course CPE487: Digital System Design. The aim is to have all the labs done in VHDL and in Verilog. All labs are meant to be on the Digilent Nexys A7-100T Development board.   
+The goal of this repo is to show off a series of labs assigned in the course CPE487: Digital System Design. The aim is to have all the labs done in VHDL and in Verilog. All labs are meant to be on the Digilent Nexys A7-100T Development board.  
 
-Original Files for the labs can be found here: [CPE487: Nexys-A7](https://github.com/byett/dsd/tree/CPE487-Fall2024/Nexys-A7)
+**DISCLAIMER:** I am also using this repo to teach myself how to use Verilog and bushing up on my VHDL, so excuse me if there are some mistakes in this repo!
+
+Original files for the labs can be found here: [CPE487: Nexys-A7](https://github.com/byett/dsd/tree/CPE487-Fall2024/Nexys-A7)
 
 ## Contents
 ### Lab 1 - Seven-Segment Decoder: [Lab 1 README](Lab-1-LED-Decoder)
