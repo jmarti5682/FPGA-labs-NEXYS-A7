@@ -4,7 +4,7 @@ The main purpose of this lab is to first introduce you to using the FPGA board a
 seven-segment display. We are going to first using it to display 0-F in binary using the on-board dip switches. Then we are going to create a counter that counts from 0 to F.
 
 ## Project 1:
-For the first part of the project we are simply following the directions from the GitHub page that is found on the main README doc. 
+For the first part of the project we are simply following the directions from the [GitHub page](https://github.com/byett/dsd/tree/CPE487-Fall2024/Nexys-A7) that is found on the main README doc. 
 
 Now as for the translation from VHDL to SystemVerilog: 
 
