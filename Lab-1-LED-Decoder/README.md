@@ -154,3 +154,49 @@ Lastly, we can go ahead and place those case structures inside of our module and
 ![F](../assets/lab1/F.png)
 
 ## Project 2: 
+
+For this second project, we are creating a hex counter. Instead of manually going through 0-F, we are going to make a program that does that for us. If one follows the initial setup, they will get a hex counter that cycles from 0-F on the first digit on the board. The part that we need to modify here is making it go faster or slower and it having a dynamic aspect to it (moving digits). 
+
+Lets focus on making the counter go faster/slower, here is the original code:
+
+##### VHDL
+```
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY counter IS
+	PORT (
+		clk : IN STD_LOGIC;
+		count : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
+	);
+END counter;
+
+ARCHITECTURE Behavioral OF counter IS
+	SIGNAL cnt : STD_LOGIC_VECTOR (28 DOWNTO 0); -- 29 bit counter
+BEGIN
+	PROCESS (clk)
+	BEGIN
+		IF clk'EVENT AND clk = '1' THEN -- on rising edge of clock
+			cnt <= cnt + 1; -- increment counter
+		END IF;
+	END PROCESS;
+	count <= cnt (28 DOWNTO 25);
+END Behavioral;
+```
+
+We are going to just look at the counter.vhd file, as this is the only file we need to look at in order to change the speed at which the counter counts. Lets first start by breaking down what we are looking at. We have an `ENTITY` `counter` with two ports, an input `clk` and an output vector `count` (a 4 bit counter). Then in our ARCHITECTURE, we have a signal `cnt` and we have a `process` block with the following logic:\
+
+When there is a rising edge\
+	Add 1 to the counter\
+ Set our count (the number we are displaying) to the current bits that we are looking at (bits 28, 27, 26, 25) 
+
+The bits `28` through `25` dicate what number we are displaying so those don't change. This leaves us with two possible things to change, the size of `cnt` and the amount we increment by. Lets first change the amount we increment by:
+```
+PROCESS (clk)
+BEGIN
+	IF clk'EVENT AND clk = '1' THEN
+		cnt <= cnt + 5;
+	END IF;
+END PROCESS;
+```
